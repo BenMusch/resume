@@ -15,9 +15,5 @@ else
 fi
 
 make resume
-s3cmd --help
-s3cmd --access-key=$ACCESS_KEY --secret-key=$SECRET_KEY \
-  put resume.pdf "s3://ben-muschol-resume/$prefix$branch.pdf"
-s3cmd --access-key=$ACCESS_KEY --secret-key=$SECRET_KEY \
-  setacl "s3://ben-muschol-resume/$prefix$branch.pdf" --acl-public
+aws s3 cp resume.pdf "s3://ben-muschol-resume/$prefix$branch.pdf" --acl public-read
 make clean
