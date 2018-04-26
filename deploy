@@ -1,16 +1,15 @@
 #!/bin/bash
 set -e
 
-prefix=''
-branch=$(git rev-parse --abbrev-ref HEAD)
-
 if [ "$CI" = true ]; then
+  branch=$CI_BRANCH_NAME
   if [ "$branch" == "master" ]; then
     prefix=""
   else
     prefix="testing/"
   fi
 else
+  branch=$(git rev-parse --abbrev-ref HEAD)
   prefix="testing/local/"
 fi
 
