@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+prefix=''
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [ "$CI" = true ]; then
+  if [ "$branch" == "master" ]; then
+    prefix=""
+  else
+    prefix="testing/"
+  fi
+else
+  prefix="testing/local/"
+fi
+
+make resume
+s3cmd --access_key=$ACCESS_KEY --secret_key=$SECRET_KEY \
+  put resume.pdf "s3://ben-muschol-resume/$prefix$branch.pdf"
+s3cmd --access_key=$ACCESS_KEY --secret_key=$SECRET_KEY \
+  setacl "s3://ben-muschol-resume/$prefix$branch.pdf" --acl-public
+make clean

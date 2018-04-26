@@ -5,3 +5,4 @@
 *.tmp
 *.xref
 *.4tc
+.env
