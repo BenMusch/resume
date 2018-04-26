@@ -2,7 +2,7 @@
 set -e
 
 if [ "$CI" = true ]; then
-  branch=$CI_BRANCH_NAME
+  branch="$CI_BRANCH_NAME"
   if [ "$branch" == "master" ]; then
     prefix=""
   else
