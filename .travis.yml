@@ -5,7 +5,7 @@ before_install:
 - sudo apt-get -y install texlive-fonts-recommended
 - sudo apt-get -y install texlive-fonts-extra
 - sudo apt-get -y install texlive-latex-extra
-- sudo apt-get -y install s3cmd
+- sudo apt-get -y install s3cmd=1.6.1
 script:
 - "./deploy"
 env:
