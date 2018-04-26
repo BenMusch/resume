@@ -1,6 +1,10 @@
 sudo: enabled
 before_install:
 - sudo apt-get -qq update
+- sudo apt-get -y install texlive-latex-base
+- sudo apt-get -y install texlive-fonts-recommended
+- sudo apt-get -y install texlive-fonts-extra
+  sudo apt-get -y install texlive-latex-extra
 - sudo apt-get -y install s3cmd
 script:
 - "./deploy"
