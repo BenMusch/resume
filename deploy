@@ -2,8 +2,7 @@
 set -e
 
 if [ "$CI" = true ]; then
-  printenv
-  branch="$CI_BRANCH_NAME"
+  branch="$CI_BRANCH"
   if [ "$branch" == "master" ]; then
     prefix=""
   else
