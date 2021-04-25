@@ -96,11 +96,13 @@
 
     \resumeSubheading
       {Airbnb}{San Francisco, CA}
-      {Software Engineer}{Aug 2019}
+      {Software Engineer}{Aug 2019 - Current}
       \resumeItemListStart
-        \item\small{
-          {Software Engineer: Storage \vspace{-2pt}}
-        }
+        \resumeItem{Infrastructure Tooling}{Developed user-facing internal application to give all developers the ability to run complex flows to manage storage resources}
+        \resumeItem{Observability}{Deployed open-source tools to monitor database queries with automatic integration into all Airbnb MySQL databases}
+        \resumeItem{Disaster Recovery}{Reworked disaster recovery pipelines for RDS databases to be more reliable and observable}
+        \resumeItem{Operations}{Served on-call for storage systems serving millions of QPS, provided support for developers using the tools}
+        \resumeItem{Technologies}{MySQL, Ruby on Rails, Terraform, AWS}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -147,9 +149,8 @@
           {Developed new front-end, migrating from CoffeeScript and jQuery to
           Vue, ES6 and Jest}
         \resumeItem{Back-End Development}
-          {Developed new features on Ruby-on-Rails application. Added a new
-          notification management system and migrated 100k accounts to a more
-          flexible schema}
+          {Developed new features such as notifications and account management
+          on Ruby-on-Rails application}
         \resumeItem{Technologies}
           {Ruby/Rails, JavaScript/Vue, Jest, Go, Bash, Docker, Postgres}
       \resumeItemListEnd
@@ -170,13 +171,14 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/ossoffforsenate/OutReach}{OutReach}}
+      {Virtual phonebank app for Reach data. Built in 1 week, used by thousands
+       of volunteers in the Ossoff special election}
     \resumeSubItem{\href{https://github.com/mit-tab/mit-tab}{MIT-Tab}}
       {Django-based application to tabulate debate tournaments. Used by 100s of
       debaters every week}
     \resumeSubItem{\href{https://github.com/mit-tab/mittab-deploy}{MIT-Tab Deployer}}
       {One-click deployments, back-ups, and invoicing of the MIT-Tab application.}
-    \resumeSubItem{Water Snake Lang}
-      {Wrote a compiler for a custom language targetting WebAssembly with DOM interactions and a web sandbox}
     \resumeSubItem{CourseOff RateMyProfessor}
       {Chrome extension + Express.js service to display RateMyProfessor in CourseOff}
   \resumeSubHeadingListEnd
